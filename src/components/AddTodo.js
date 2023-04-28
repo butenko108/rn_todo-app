@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, TextInput, Alert, Keyboard } from 'react-native';
+import { View, StyleSheet, TextInput, Alert, Keyboard, Text } from 'react-native';
 import { THEME } from '../theme';
 import { AntDesign } from '@expo/vector-icons';
 
@@ -28,7 +28,7 @@ export const AddTodo = ({ onSubmit }) => {
         keyboardType="default"
       />
       <AntDesign.Button name="pluscircleo" size={24} color="black" onPress={pressHandler}>
-        Добавить{' '}
+        <Text>Добавить </Text>
       </AntDesign.Button>
     </View>
   );
