@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {View, StyleSheet, TextInput, Button, Alert, Keyboard } from 'react-native';
+import { View, StyleSheet, TextInput, Alert, Keyboard } from 'react-native';
 import { THEME } from '../theme';
 import { AntDesign } from '@expo/vector-icons';
 
@@ -12,22 +12,24 @@ export const AddTodo = ({ onSubmit }) => {
       setValue('');
       Keyboard.dismiss();
     } else {
-      Alert.alert('Todos name can not be empty', '', [], { cancelable: true, });
+      Alert.alert('Todos name can not be empty', '', [], { cancelable: true });
     }
   };
 
   return (
     <View style={styles.block}>
       <TextInput
-      style={styles.input}
-      onChangeText={setValue}
-      value={value}
-      placeholder="Введите название Todo..."
-      autoCorrect={false}
-      autoCapitalize='words'
-      keyboardType='default'
+        style={styles.input}
+        onChangeText={setValue}
+        value={value}
+        placeholder="Введите название Todo..."
+        autoCorrect={false}
+        autoCapitalize="words"
+        keyboardType="default"
       />
-      <AntDesign.Button name="pluscircleo" size={24} color="black" onPress={pressHandler}>Добавить </AntDesign.Button>
+      <AntDesign.Button name="pluscircleo" size={24} color="black" onPress={pressHandler}>
+        Добавить{' '}
+      </AntDesign.Button>
     </View>
   );
 };

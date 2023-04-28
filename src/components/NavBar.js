@@ -1,16 +1,18 @@
 import React from 'react';
-import { View, StyleSheet, StatusBar, Platform } from 'react-native';
+import { View, StyleSheet, Platform } from 'react-native';
 import { THEME } from '../theme';
 import { AppTextBold } from './ui/AppTextBold';
 
-export const NavBar = ({title}) => (
-  <View style={{ 
-    ...styles.navbar, 
-    ...Platform.select({ 
-      ios: styles.navbarIos,
-      android: styles.navbarAndroid,
-    }) 
-   }}>
+export const NavBar = ({ title }) => (
+  <View
+    style={{
+      ...styles.navbar,
+      ...Platform.select({
+        ios: styles.navbarIos,
+        android: styles.navbarAndroid,
+      }),
+    }}
+  >
     <AppTextBold style={styles.text}>{title}</AppTextBold>
   </View>
 );
@@ -20,7 +22,6 @@ const styles = StyleSheet.create({
     height: 70,
     alignItems: 'center',
     justifyContent: 'flex-end',
-    // paddingTop: StatusBar.currentHeight,
     paddingBottom: 10,
   },
   navbarAndroid: {
@@ -33,5 +34,5 @@ const styles = StyleSheet.create({
   text: {
     color: Platform.OS === 'android' ? 'white' : THEME.MAIN_COLOR,
     fontSize: 20,
-  }, 
+  },
 });

@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useCallback } from 'react';
-import { View, StyleSheet, FlatList, Image, Dimensions, useWindowDimensions } from 'react-native';
+import React, { useContext, useEffect } from 'react';
+import { View, StyleSheet, FlatList, Image, useWindowDimensions } from 'react-native';
 import { AddTodo } from '../components/AddTodo';
 import { AppText } from '../components/ui/AppText';
 import { AppButton } from '../components/ui/AppButton';
@@ -14,9 +14,6 @@ export const MainScreen = () => {
   const { changeScreen: openTodo } = useContext(ScreenContext);
   const { width } = useWindowDimensions();
   const calculateWidth = width - THEME.PADDING_HORIZONTAL * 2;
-
-  // const loadTodos = useCallback(async () => await fetchTodos(), [fetchTodos]);
-  // useEffect(() => loadTodos(), []);
 
   useEffect(() => {
     const loadTodos = async () => await fetchTodos();

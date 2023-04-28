@@ -1,10 +1,8 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
-export const AppCard = (props) => {
-  return (
-    <View style={{ ...styles.default, ...props.style, }}>{props.children}</View>
-  );
+export const AppCard = props => {
+  return <View style={{ ...styles.default, ...props.style }}>{props.children}</View>;
 };
 
 const styles = StyleSheet.create({

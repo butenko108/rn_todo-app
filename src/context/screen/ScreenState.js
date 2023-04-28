@@ -9,9 +9,9 @@ export const ScreenState = ({ children }) => {
   const changeScreen = id => dispatch({ type: CHANGE_SCREEN, payload: id });
 
   return (
-    <ScreenContext.Provider 
-      value={{ 
-        changeScreen, 
+    <ScreenContext.Provider
+      value={{
+        changeScreen,
         todoId: state,
       }}
     >

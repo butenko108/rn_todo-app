@@ -22,21 +22,21 @@ export const TodoScreen = () => {
 
       <AppCard style={styles.card}>
         <AppTextBold style={styles.title}>{selectedTodo.title}</AppTextBold>
-        
+
         <AppButton onPress={() => setModal(true)}>
-          <FontAwesome name='edit' size={20} />
+          <FontAwesome name="edit" size={20} />
         </AppButton>
       </AppCard>
 
       <View style={styles.buttons}>
         <View style={styles.button}>
           <AppButton onPress={() => closeTodo(null)} color={THEME.GREY_COLOR}>
-            <AntDesign name='back' size={20} color='#fff' />
+            <AntDesign name="back" size={20} color="#fff" />
           </AppButton>
         </View>
         <View style={styles.button}>
           <AppButton onPress={() => onRemove(selectedTodo.id)} color={THEME.DANGER_COLOR}>
-            <FontAwesome name='remove' size={20} color='#fff' />
+            <FontAwesome name="remove" size={20} color="#fff" />
           </AppButton>
         </View>
       </View>

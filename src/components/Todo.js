@@ -3,11 +3,7 @@ import { AppText } from './ui/AppText';
 
 export const Todo = ({ todo, onRemove, openTodo }) => {
   return (
-    <TouchableOpacity 
-      activeOpacity={0.3} 
-      onPress={() => openTodo(todo.id)}
-      onLongPress={onRemove.bind(null, todo.id)}
-    >
+    <TouchableOpacity activeOpacity={0.3} onPress={() => openTodo(todo.id)} onLongPress={onRemove.bind(null, todo.id)}>
       <View style={styles.todo}>
         <AppText>{todo.title}</AppText>
       </View>
