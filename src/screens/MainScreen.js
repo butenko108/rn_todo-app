@@ -39,7 +39,7 @@ export const MainScreen = () => {
       <AddTodo onSubmit={addTodo} />
 
       {todos.length ? (
-        <View style={{ width: calculateWidth }}>
+        <View style={{ width: calculateWidth, marginBottom: 150 }}>
           <FlatList
             data={todos}
             renderItem={({ item }) => <Todo todo={item} onRemove={removeTodo} openTodo={openTodo} />}
